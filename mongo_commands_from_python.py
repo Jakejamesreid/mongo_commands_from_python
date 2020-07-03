@@ -25,13 +25,13 @@ new_doc = {'first': 'douglas', 'last': 'adams', 'dob': '11/03/1952', 'hair_colou
 coll.insert(new_doc)
 
 # Insert multiple entries into the DB
-# new_docs = [{'first': 'terry', 'last': 'pratchet', 'dob': '11/03/28/04/1948', 'hair_colour': 'not much', 'occupation': 'writer', 'nationality': 'english'},
+new_docs = [{'first': 'terry', 'last': 'pratchet', 'dob': '11/03/28/04/1948', 'hair_colour': 'not much', 'occupation': 'writer', 'nationality': 'english'},
 {'first': 'george', 'last': 'rr martin', 'dob': '11/03/20/09/1948', 'hair_colour': 'white', 'occupation': 'writer', 'nationality': 'american'}]
 coll.insert_many(new_docs)
 
 # Find everyone whos name is Douglas
 document = coll.find({'first': 'douglas'})
-# print(document.next())
+print(document.next())
 
 # Delete entry from DB
 coll.remove({'first': 'douglas'})
